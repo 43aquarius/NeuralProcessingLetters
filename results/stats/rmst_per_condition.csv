@@ -1,0 +1,28 @@
+condition,coverage,R,mode,n,events,censored,rmst
+C25 R1,25,1,blocked,5,0,5,20000.0
+C25 R4 blocked,25,4,blocked,5,0,5,20000.0
+C25 R8 blocked,25,8,blocked,5,0,5,20000.0
+C25 R8 interleaved,25,8,interleaved,5,0,5,20000.0
+C35 R1,35,1,blocked,5,2,3,18359.999999999996
+C35 R2 blocked,35,2,blocked,5,1,4,18380.0
+C35 R2 interleaved,35,2,interleaved,5,0,5,20000.0
+C35 R4 blocked,35,4,blocked,5,0,5,20000.0
+C35 R4 interleaved,35,4,interleaved,5,0,5,20000.0
+C35 R8 blocked,35,8,blocked,5,0,5,20000.0
+C35 R8 interleaved,35,8,interleaved,5,0,5,20000.0
+C45 R1,45,1,blocked,5,5,0,8900.0
+C55 R1,55,1,blocked,5,5,0,4340.000000000001
+C55 R2 blocked,55,2,blocked,5,5,0,5260.000000000001
+C55 R2 interleaved,55,2,interleaved,5,5,0,4620.0
+C55 R4 blocked,55,4,blocked,5,5,0,4840.000000000001
+C55 R4 interleaved,55,4,interleaved,5,5,0,5200.000000000002
+C55 R8 blocked,55,8,blocked,5,5,0,4060.0
+C55 R8 interleaved,55,8,interleaved,5,5,0,4560.000000000001
+C70 R1,70,1,blocked,5,5,0,2660.0
+C85 R1,85,1,blocked,5,5,0,1920.0
+C85 R2 blocked,85,2,blocked,5,5,0,1780.0
+C85 R2 interleaved,85,2,interleaved,5,5,0,1920.0000000000002
+C85 R4 blocked,85,4,blocked,5,5,0,1800.0
+C85 R4 interleaved,85,4,interleaved,5,5,0,1820.0
+C85 R8 blocked,85,8,blocked,5,5,0,1760.0000000000002
+C85 R8 interleaved,85,8,interleaved,5,5,0,1800.0

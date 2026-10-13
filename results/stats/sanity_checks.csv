@@ -1,0 +1,27 @@
+check,expected,observed,status,note
+row count,135,135,PASS,
+condition count (27 cells x 5 seeds),27,27,PASS,
+seeds per condition all == 5,True,True,PASS,
+"seeds are exactly {0,1,2,3,4} in every condition",True,True,PASS,
+"arm A runs (R=1, six coverages)",30,30,PASS,
+"arm B runs (blocked R in {2,4,8} at 35/55/85)",45,45,PASS,
+"arm C runs (interleaved R in {2,4,8} at 35/55/85)",45,45,PASS,
+"arm D runs (25%: blocked 4,8 + interleaved 8)",15,15,PASS,
+non-censored runs,83,83,PASS,
+censored at C35 R1,3/5,3/5,PASS,
+grokked runs across the seven 35% conditions,3,3,PASS,
+C35 R1 grok steps,"[14900, 16900]","[14900, 16900]",PASS,
+C35 R2 blocked grok steps,[11900],[11900],PASS,
+n_test per coverage,"{25: 397, 35: 344, 45: 291, 55: 238, 70: 159, 85: 79}","{25: 397, 35: 344, 45: 291, 55: 238, 70: 159, 85: 79}",PASS,from per-run logs; equals 529 - round(coverage/100*529)
+n_test == 529 - round(cov*529) for every run,True,True,PASS,
+grok times are multiples of 100 (no step-1 groks),True,True,PASS,
+"stop_step == grok_time (grokked) / 20,000 (censored)",True,True,PASS,
+censored <=> grok_time empty,True,True,PASS,
+mem_time present for all runs,True,True,PASS,
+manuscript claim: MemTime never exceeds 500,max <= 500,max = 500,PASS,claim holds with equality
+manuscript claim: median MemTime across 135 runs,200,200,PASS,
+final_test_acc * n_test is an integer for every run,True,True,PASS,
+history covers all 135 runs,135,135,PASS,
+"history steps lie on the {1, 100, 200, ...} grid",True,True,PASS,
+history has a step-1000 row for every run,135,135,PASS,
+Table A3 descriptive rows reproduced,27/27,27/27,PASS,"GrokTime medians count censored runs at the 20,000 budget"

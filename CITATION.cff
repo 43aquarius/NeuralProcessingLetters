@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or data, please cite both the software and the
+  related manuscript.
+type: software
+title: 'Coverage versus within-epoch repetition at matched dose in transformer grokking: code and data'
+authors:
+  - family-names: Tan
+    given-names: Chang
+    affiliation: Dalian University of Technology
+    email: aquars43@foxmail.com
+repository-code: 'https://github.com/43aquarius/NeuralProcessingLetters'
+abstract: >-
+  Training code, raw run logs, canonical analysis tables, statistical
+  pipeline, and verification scripts for a 135-run study of coverage and
+  within-epoch repetition in transformer grokking on modular addition,
+  with the per-example dose held constant across repetition levels.
+keywords:
+  - grokking
+  - data coverage
+  - data repetition
+  - data-constrained training
+  - transformers
+  - generalization
+license: MIT
+version: 1.0.0
+date-released: '2026-10-13'
+related-identifiers:
+  - type: url
+    value: 'https://github.com/43aquaris/NeuralProcessingLetters/releases'
+    relation: is-supplement-to

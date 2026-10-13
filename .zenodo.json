@@ -1,0 +1,24 @@
+{
+  "title": "Coverage versus within-epoch repetition at matched dose in transformer grokking: code and data",
+  "creators": [
+    {
+      "name": "Tan, Chang",
+      "affiliation": "Dalian University of Technology"
+    }
+  ],
+  "description": "<p>Training code, raw run logs (135 runs), canonical analysis tables, the exact-permutation statistical pipeline, and manuscript-verification scripts for a study of coverage and within-epoch repetition in transformer grokking on modular addition (p = 23), with the per-example dose held constant across repetition levels. The archived pipeline reproduces every statistic reported in the related manuscript.</p><p>Repository: https://github.com/43aquaris/NeuralProcessingLetters — code under MIT; data files and figures under CC-BY-4.0.</p>",
+  "keywords": ["grokking", "data coverage", "data repetition", "data-constrained training", "transformers", "generalization"],
+  "license": "MIT",
+  "access_right": "open",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-10-13",
+  "related_identifiers": [
+    {
+      "identifier": "Manuscript DOI to be added after publication (Neural Processing Letters submission; submission package archived at https://github.com/43aquaris/NeuralProcessingLetters/releases)",
+      "relation": "is_supplement_to",
+      "resource_type": "publication-article"
+    }
+  ],
+  "communities": []
+}

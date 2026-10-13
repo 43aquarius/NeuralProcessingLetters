@@ -1,0 +1,2 @@
+beta,se,HR,ci_lo,ci_hi,converged,iterations,note,cox_n_ref,cox_n_index,cox_strata,cox_index,cox_events
+-0.03951494826040859,0.35915590280520354,0.9612555847844005,0.4754718580814882,1.9433585470390538,True,4,converged after 4 Newton steps,15,45,"coverage in {35,55,85}","blocked repetition R in {2,4,8} (z=1) vs R=1 (z=0)",43

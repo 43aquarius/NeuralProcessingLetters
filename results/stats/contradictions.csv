@@ -1,0 +1,42 @@
+item,manuscript_value,recomputed_value,status,explanation
+85% vs 45% GrokTime MW p (draft: 'exact'),0.008,0.00794,CONSISTENT,"exact 2/252 = 0.00794 rounds to the draft's 0.008; scipy asymptotic gives 0.01219, so the draft value can only be the exact one"
+85% vs 25% GrokTime MW p (draft: 0.0075),0.0075,0.00794,MISMATCH,"0.0075 is below the exact two-sided minimum 2/252 = 0.00794 for 5 vs 5; scipy's asymptotic tie-corrected method reproduces 0.00749, so the draft value is asymptotic but was labelled exact; with censored runs at the budget the exact permutation p is 0.00794"
+Family 1 Holm-adjusted p,0.015,0.01588,MISMATCH,Holm over the exact p-values gives 0.01587; the draft's 0.015 came from Holm over the smaller asymptotic p (2 x 0.00749)
+"Family 3 MW p (25%/R8/blocked vs 55%/R1, final acc)",0.012,0.00794,MISMATCH,"rank-biserial = -1 (perfect separation) makes the exact two-sided p 2/252 = 0.00794; scipy asymptotic reproduces 0.01167, matching the draft's 0.12 (asymptotic, mislabelled exact)"
+Family 3 Holm-adjusted p,0.021,0.00794,MISMATCH,with the single declared contrast the Holm p equals the raw exact p; the draft's 0.021 corresponds to Holm over TWO contrasts (the archived stats.json also tested 25%/R8/blocked vs 85%/R1)
+Family 2 MW p: C55 R1 vs C55 R4 (blocked),0.68,0.65079,MISMATCH,scipy asymptotic reproduces the draft value (0.67517); exact permutation p differs
+Family 2 MW p: C55 R1 vs C55 R8 (blocked),0.83,0.79365,MISMATCH,scipy asymptotic reproduces the draft value (0.83404); exact permutation p differs
+Family 2 MW p: C85 R1 vs C85 R4 (blocked),0.67,0.67460,MISMATCH,scipy asymptotic reproduces the draft value (0.67329); exact permutation p differs
+Family 2 MW p: C85 R1 vs C85 R8 (blocked),0.53,0.55556,MISMATCH,scipy asymptotic reproduces the draft value (0.52581); exact permutation p differs
+"F1 85% vs 45% median-difference bootstrap CI (draft [-6,900, -6,000])","[-6900, -6000]","[-11600, -4000]",ARCHIVED-BUG,"the archived code (scripts/analyze.py, mw_exact) computed median(resample(b)) - median(a_observed): only ONE group was resampled, so the CI is too narrow; reproducing that code gives (-6900.0, -6000.0) = the draft value; the correct two-group within-group percentile bootstrap gives the wider recomputed value"
+Family 2 median-difference bootstrap CI: C55 R1 vs C55 R4,"[-1200, 2600] (draft; R_repetition - R1)","[-2600, 2000] (this pipeline; R1 - R_repetition)",ARCHIVED-BUG,"reproducing the archived one-group bootstrap gives (-1200.0, 2600.0) = the draft value; the correct two-group percentile bootstrap is wider; note also the opposite sign convention"
+Family 2 median-difference bootstrap CI: C55 R1 vs C55 R8,"[-1600, 1500] (draft; R_repetition - R1)","[-1500, 2600] (this pipeline; R1 - R_repetition)",ARCHIVED-BUG,"reproducing the archived one-group bootstrap gives (-1600.0, 1500.0) = the draft value; the correct two-group percentile bootstrap is wider; note also the opposite sign convention"
+Family 2 median-difference bootstrap CI: C85 R1 vs C85 R4,"[-200, 500] (draft; R_repetition - R1)","[-500, 700] (this pipeline; R1 - R_repetition)",ARCHIVED-BUG,"reproducing the archived one-group bootstrap gives (-200.0, 500.0) = the draft value; the correct two-group percentile bootstrap is wider; note also the opposite sign convention"
+Family 2 median-difference bootstrap CI: C85 R1 vs C85 R8,"[-300, 400] (draft; R_repetition - R1)","[-400, 700] (this pipeline; R1 - R_repetition)",ARCHIVED-BUG,"reproducing the archived one-group bootstrap gives (-300.0, 400.0) = the draft value; the correct two-group percentile bootstrap is wider; note also the opposite sign convention"
+"F3 median-difference bootstrap CI (draft [-77.2, -72.2] pp)","[-77.24, -72.21] pp","[-78.8, -72.2] pp",ARCHIVED-BUG,"same one-group-bootstrap cause: reproducing the archived code gives (-77.2, -72.2) = the draft value"
+"Manuscript sec. 4.2 bound statement: C85 R8 interval 'excludes shifts larger than roughly 17% earlier or 22% later than the 1,800-step median'",17% earlier / 22% later,"[-400, 700] steps around 1,800 = 22% earlier / 39% later",ARCHIVED-BUG,"the bound was derived from the too-narrow archived CI [-300, +400]; with the correct CI the excluded shifts are wider"
+"Manuscript sec. 4.2 bound statement: C55 interval 'excludes shifts larger than roughly one third of the 4,700-step median'",about one third,"[-1500, 2600] steps around 4,700 = 32% earlier / 55% later",ARCHIVED-BUG,"the bound was derived from the too-narrow archived CI [-1,600, +1,500]"
+"Mode-contrast CI quoted in draft (C55 R2, +700 steps, [-400, 4,300])","[-400, 4300]","[-5300, 4300]",ARCHIVED-BUG,"reproducing the archived one-group bootstrap gives (-400.0, 4300.0) = the draft value; correct two-group percentile bootstrap shown"
+Family 2: 'every confidence interval includes zero',True,True,CONSISTENT,holds for the recomputed CIs as well
+Family 2: 'point estimates of at most 900 steps',True,True,CONSISTENT,max |median difference| = 900 steps
+Family 2 median-difference sign convention,R_repetition - R1,R1 - R_repetition (median of first-named minus second-named),SIGN CONVENTION,"the draft reports e.g. -300 steps for 'R=1 versus R=4' at 55% coverage, computed as median(R4) - median(R1) = 4400 - 4700; this pipeline reports median(R1) - median(R4) = +300; magnitudes agree, signs are opposite"
+C25 final L2 norm MW p: R1 vs R4 (blocked),0.016,0.01587,CONSISTENT,draft values match the exact permutation p rounded to 3 decimals (2/252 = 0.00794 -> 0.008; 4/252 = 0.01587 -> 0.016)
+C25 final L2 norm MW p: R1 vs R8 (blocked),0.008,0.00794,CONSISTENT,draft values match the exact permutation p rounded to 3 decimals (2/252 = 0.00794 -> 0.008; 4/252 = 0.01587 -> 0.016)
+"Spearman rho, final norm vs GrokTime (83 grokked runs)",0.065,0.0648,CONSISTENT,permutation p = 0.5524 vs draft's 0.56 (scipy's asymptotic t approximation; the permutation p is the declared one)
+Mode contrasts GrokTime: draft claims 'all p > 0.2',True,min exact p = 0.2381,CONSISTENT,"recomputed with the exact permutation Mann-Whitney (censored runs at the 20,000 budget)"
+C35 median MemTime R1 -> R8 (blocked),100 -> 200,100 -> 200,CONSISTENT,
+C55 median MemTime R1 -> R8 (blocked),100 -> 300,100 -> 300,CONSISTENT,
+C85 median MemTime R1 -> R8 (blocked),200 -> 500,200 -> 500,CONSISTENT,
+C25 median final test accuracy (R1),13.4%,13.4%,CONSISTENT,
+C25 median final test accuracy (R4b),21.7%,21.7%,CONSISTENT,
+C25 median final test accuracy (R8b),21.2%,21.2%,CONSISTENT,
+C25 median final test accuracy (R8i),17.4%,17.4%,CONSISTENT,
+C25 median final L2 norm (R1),17.5,17.473,CONSISTENT,draft value is the recomputed median rounded to one decimal
+C25 median final L2 norm (R4b),19.4,19.383,CONSISTENT,draft value is the recomputed median rounded to one decimal
+C25 median final L2 norm (R8b),21.0,20.965,CONSISTENT,draft value is the recomputed median rounded to one decimal
+C25 median final L2 norm (R8i),18.3,18.265,CONSISTENT,draft value is the recomputed median rounded to one decimal
+"wnorm@1000 medians '23.1-24.3 in every cell' (C35/55/85, all R, both modes)",23.1-24.3,23.1-24.3,CONSISTENT,21 cells
+MemTime 'never exceeds 500 steps (median 200)',"max <= 500, median 200","max = 500, median 200",CONSISTENT,maximum is attained (85%/R8/blocked)
+archived memtime test p (C55 R1 vs R8),0.00398,0.00794 (exact),SUPERSEDED,0.00398 is scipy's asymptotic tie-corrected p with within-group ties; it is below the exact minimum 2/252 = 0.00794; the exact permutation p is 0.00794 (see secondary_tests.csv)
+archived memtime test p (C35 R1 vs R8),0.00398,0.00794 (exact),SUPERSEDED,0.00398 is scipy's asymptotic tie-corrected p with within-group ties; it is below the exact minimum 2/252 = 0.00794; the exact permutation p is 0.00794 (see secondary_tests.csv)
+archived memtime test p (C85 R1 vs R8),0.00398,0.00794 (exact),SUPERSEDED,0.00398 is scipy's asymptotic tie-corrected p with within-group ties; it is below the exact minimum 2/252 = 0.00794; the exact permutation p is 0.00794 (see secondary_tests.csv)

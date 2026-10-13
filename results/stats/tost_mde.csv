@@ -1,0 +1,4 @@
+margin_fraction,margin_ratio,power_at_true_ratio_1,largest_true_ratio_with_power_ge_0p8,note
+0.1,1.1,0.0,,largest true GrokTime ratio still declared equivalent with power >= 0.8; based on observed pooled SD 0.1164 of log10 GrokTime
+0.25,1.25,0.021,,largest true GrokTime ratio still declared equivalent with power >= 0.8; based on observed pooled SD 0.1164 of log10 GrokTime
+0.5,1.5,0.4145,,largest true GrokTime ratio still declared equivalent with power >= 0.8; based on observed pooled SD 0.1164 of log10 GrokTime

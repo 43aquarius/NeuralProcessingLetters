@@ -1,0 +1,13 @@
+coverage,contrast,k1,n1,k2,n2,p_fisher,OR,cp1_lo,cp1_hi,cp2_lo,cp2_hi,note
+35,C35 R1 vs C35 R2 blocked,2,5,1,5,1.0,2.667,0.0527,0.8534,0.0051,0.7164,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R1 vs C35 R2 interleaved,2,5,0,5,0.44444,,0.0527,0.8534,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R2 blocked vs C35 R2 interleaved,1,5,0,5,1.0,,0.0051,0.7164,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R1 vs C35 R4 blocked,2,5,0,5,0.44444,,0.0527,0.8534,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R1 vs C35 R4 interleaved,2,5,0,5,0.44444,,0.0527,0.8534,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R4 blocked vs C35 R4 interleaved,0,5,0,5,1.0,,0.0,0.5218,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R1 vs C35 R8 blocked,2,5,0,5,0.44444,,0.0527,0.8534,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R1 vs C35 R8 interleaved,2,5,0,5,0.44444,,0.0527,0.8534,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+35,C35 R8 blocked vs C35 R8 interleaved,0,5,0,5,1.0,,0.0,0.5218,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+25,C25 R1 vs C25 R4 blocked,0,5,0,5,1.0,,0.0,0.5218,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+25,C25 R1 vs C25 R8 blocked,0,5,0,5,1.0,,0.0,0.5218,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group
+25,C25 R8 blocked vs C25 R8 interleaved,0,5,0,5,1.0,,0.0,0.5218,0.0,0.5218,two-sided Fisher exact; Clopper-Pearson 95% CIs per group

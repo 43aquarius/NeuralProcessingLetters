@@ -1,0 +1,78 @@
+condition,coverage,R,mode,time,n_at_risk,events,censored,survival
+C35 R1,35,1,blocked,14900.0,5,1,0,0.8
+C35 R1,35,1,blocked,16900.0,4,1,0,0.6000000000000001
+C35 R2 blocked,35,2,blocked,11900.0,5,1,0,0.8
+C45 R1,45,1,blocked,5800.0,5,1,0,0.8
+C45 R1,45,1,blocked,8100.0,4,1,0,0.6000000000000001
+C45 R1,45,1,blocked,8400.0,3,1,0,0.4000000000000001
+C45 R1,45,1,blocked,8800.0,2,1,0,0.20000000000000004
+C45 R1,45,1,blocked,13400.0,1,1,0,0.0
+C55 R1,55,1,blocked,2700.0,5,1,0,0.8
+C55 R1,55,1,blocked,3200.0,4,1,0,0.6000000000000001
+C55 R1,55,1,blocked,4700.0,3,2,0,0.20000000000000004
+C55 R1,55,1,blocked,6400.0,1,1,0,0.0
+C55 R2 blocked,55,2,blocked,3100.0,5,1,0,0.8
+C55 R2 blocked,55,2,blocked,4000.0,4,1,0,0.6000000000000001
+C55 R2 blocked,55,2,blocked,4200.0,3,1,0,0.4000000000000001
+C55 R2 blocked,55,2,blocked,7200.0,2,1,0,0.20000000000000004
+C55 R2 blocked,55,2,blocked,7800.0,1,1,0,0.0
+C55 R2 interleaved,55,2,interleaved,2900.0,5,1,0,0.8
+C55 R2 interleaved,55,2,interleaved,3400.0,4,1,0,0.6000000000000001
+C55 R2 interleaved,55,2,interleaved,3500.0,3,1,0,0.4000000000000001
+C55 R2 interleaved,55,2,interleaved,3800.0,2,1,0,0.20000000000000004
+C55 R2 interleaved,55,2,interleaved,9500.0,1,1,0,0.0
+C55 R4 blocked,55,4,blocked,3500.0,5,1,0,0.8
+C55 R4 blocked,55,4,blocked,4000.0,4,1,0,0.6000000000000001
+C55 R4 blocked,55,4,blocked,4400.0,3,1,0,0.4000000000000001
+C55 R4 blocked,55,4,blocked,5000.0,2,1,0,0.20000000000000004
+C55 R4 blocked,55,4,blocked,7300.0,1,1,0,0.0
+C55 R4 interleaved,55,4,interleaved,3300.0,5,1,0,0.8
+C55 R4 interleaved,55,4,interleaved,4000.0,4,1,0,0.6000000000000001
+C55 R4 interleaved,55,4,interleaved,4700.0,3,1,0,0.4000000000000001
+C55 R4 interleaved,55,4,interleaved,6900.0,2,1,0,0.20000000000000004
+C55 R4 interleaved,55,4,interleaved,7100.0,1,1,0,0.0
+C55 R8 blocked,55,8,blocked,3100.0,5,1,0,0.8
+C55 R8 blocked,55,8,blocked,3300.0,4,1,0,0.6000000000000001
+C55 R8 blocked,55,8,blocked,3800.0,3,1,0,0.4000000000000001
+C55 R8 blocked,55,8,blocked,3900.0,2,1,0,0.20000000000000004
+C55 R8 blocked,55,8,blocked,6200.0,1,1,0,0.0
+C55 R8 interleaved,55,8,interleaved,3300.0,5,1,0,0.8
+C55 R8 interleaved,55,8,interleaved,3900.0,4,2,0,0.4
+C55 R8 interleaved,55,8,interleaved,4500.0,2,1,0,0.2
+C55 R8 interleaved,55,8,interleaved,7200.0,1,1,0,0.0
+C70 R1,70,1,blocked,2300.0,5,1,0,0.8
+C70 R1,70,1,blocked,2400.0,4,1,0,0.6000000000000001
+C70 R1,70,1,blocked,2600.0,3,1,0,0.4000000000000001
+C70 R1,70,1,blocked,2800.0,2,1,0,0.20000000000000004
+C70 R1,70,1,blocked,3200.0,1,1,0,0.0
+C85 R1,85,1,blocked,1500.0,5,1,0,0.8
+C85 R1,85,1,blocked,1700.0,4,1,0,0.6000000000000001
+C85 R1,85,1,blocked,1800.0,3,1,0,0.4000000000000001
+C85 R1,85,1,blocked,2200.0,2,1,0,0.20000000000000004
+C85 R1,85,1,blocked,2400.0,1,1,0,0.0
+C85 R2 blocked,85,2,blocked,1500.0,5,1,0,0.8
+C85 R2 blocked,85,2,blocked,1600.0,4,1,0,0.6000000000000001
+C85 R2 blocked,85,2,blocked,1700.0,3,1,0,0.4000000000000001
+C85 R2 blocked,85,2,blocked,1800.0,2,1,0,0.20000000000000004
+C85 R2 blocked,85,2,blocked,2300.0,1,1,0,0.0
+C85 R2 interleaved,85,2,interleaved,1800.0,5,3,0,0.4
+C85 R2 interleaved,85,2,interleaved,2000.0,2,1,0,0.2
+C85 R2 interleaved,85,2,interleaved,2200.0,1,1,0,0.0
+C85 R4 blocked,85,4,blocked,1600.0,5,2,0,0.6
+C85 R4 blocked,85,4,blocked,1700.0,3,1,0,0.4
+C85 R4 blocked,85,4,blocked,1800.0,2,1,0,0.2
+C85 R4 blocked,85,4,blocked,2300.0,1,1,0,0.0
+C85 R4 interleaved,85,4,interleaved,1600.0,5,1,0,0.8
+C85 R4 interleaved,85,4,interleaved,1700.0,4,1,0,0.6000000000000001
+C85 R4 interleaved,85,4,interleaved,1800.0,3,1,0,0.4000000000000001
+C85 R4 interleaved,85,4,interleaved,1900.0,2,1,0,0.20000000000000004
+C85 R4 interleaved,85,4,interleaved,2100.0,1,1,0,0.0
+C85 R8 blocked,85,8,blocked,1500.0,5,1,0,0.8
+C85 R8 blocked,85,8,blocked,1600.0,4,1,0,0.6000000000000001
+C85 R8 blocked,85,8,blocked,1700.0,3,1,0,0.4000000000000001
+C85 R8 blocked,85,8,blocked,1800.0,2,1,0,0.20000000000000004
+C85 R8 blocked,85,8,blocked,2200.0,1,1,0,0.0
+C85 R8 interleaved,85,8,interleaved,1400.0,5,1,0,0.8
+C85 R8 interleaved,85,8,interleaved,1700.0,4,1,0,0.6000000000000001
+C85 R8 interleaved,85,8,interleaved,1900.0,3,2,0,0.20000000000000004
+C85 R8 interleaved,85,8,interleaved,2100.0,1,1,0,0.0
