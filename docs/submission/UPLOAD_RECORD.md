@@ -35,6 +35,12 @@
 4. **Release `v1.0.0` created** with the complete submission package:
    `NPL-submission-package-v1.0.0.zip` (manuscript PDF + LaTeX source +
    figures + cover letter + manifest) and `manuscript-sn-v1.0.0.pdf`.
+   Post-upload check: the PDF asset object was re-uploaded once
+   (identical content, sha256-verified against the local file) after the
+   freshly-created repository showed GitHub-side cache-propagation delays
+   on the public download URLs; the repository itself, the release, and
+   both assets are complete and verified through the API (asset states
+   `uploaded`, byte-identical downloads).
 
 ## Pre-push safety checks (all on the final staged tree)
 
