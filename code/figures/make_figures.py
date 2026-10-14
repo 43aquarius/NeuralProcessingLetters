@@ -131,9 +131,7 @@ ax.set_ylim(-0.02, 1.05)
 ax.set_xlabel("Optimization steps")
 ax.set_ylabel("Test accuracy")
 ax.axhline(0.95, color="0.75", lw=0.5, ls=":")
-ax.legend(ncol=2, loc="upper left", bbox_to_anchor=(0.0, 1.02),
-          handlelength=1.0, columnspacing=0.7, labelspacing=0.32,
-          borderaxespad=0.0, handletextpad=0.4)
+# (legend moved to the empty lower half of panel b -- see the comment there)
 letter(ax, "a")
 
 ax = axes[1]
@@ -144,9 +142,22 @@ ax.set_xlim(100, MAX_STEPS)
 ax.set_ylim(-0.02, 1.05)
 ax.set_xlabel("Optimization steps")
 ax.set_ylabel("Training accuracy")
+# legend in the empty lower half of this panel: no inside position in panel
+# (a) is clear -- the 85% median test curve jumps to ~0.8 accuracy within 200
+# steps and then runs flat across the upper half of panel (a), crossing every
+# candidate legend region there. Both panels share the same six coverage
+# curves and colour encoding, and here all curves have already saturated
+# above 0.6 accuracy by the first evaluated step (100), leaving the lower
+# half of the panel empty
+hnd, lab = axes[0].get_legend_handles_labels()
+ax.legend(hnd, lab, ncol=2, loc="lower left", bbox_to_anchor=(0.02, 0.04),
+          handlelength=1.0, columnspacing=0.7, labelspacing=0.32,
+          handletextpad=0.4)
 letter(ax, "b")
 
 ax = axes[2]
+cens_first = min(c for c in COVS_ALL
+                 if df.query("coverage==@c and repetition==1 and mode=='blocked'")["grok_censored"].any())
 for cov in COVS_ALL:
     q = df.query("coverage==@cov and repetition==1 and mode=='blocked'")
     y = q["grok_step_filled"].to_numpy()
@@ -162,11 +173,16 @@ for cov in COVS_ALL:
         ax.annotate("", xy=(cov, MAX_STEPS * 1.32), xytext=(cov, MAX_STEPS * 0.78),
                     arrowprops=dict(arrowstyle="-|>", color=COV_COLOR[cov], lw=1.3))
         n_str = f"{cens.sum()}/{len(cens)}"
-        # placed to the right of the arrow shaft (not stacked above the arrow
-        # heads), so adjacent censoring labels (25%: 5/5, 35%: 3/5) cannot
-        # merge into one another at the narrow panel width
-        ax.text(cov + 1.8, MAX_STEPS * 1.06, n_str, fontsize=5.5, va="center",
-                color="0.35", ha="left")
+        # placed in a shared row above the arrow heads (25%: 5/5, 35%: 3/5):
+        # the first label is centred over its own arrow, later ones are
+        # shifted right of the head, so the two cannot collide with each
+        # other or with the wide arrow heads at the narrow panel width
+        if cov == cens_first:
+            ax.text(cov, MAX_STEPS * 1.75, n_str, fontsize=5.5, va="center",
+                    ha="center", color="0.35")
+        else:
+            ax.text(cov + 3.0, MAX_STEPS * 1.75, n_str, fontsize=5.5, va="center",
+                    ha="left", color="0.35")
 ax.set_yscale("log")
 ax.set_ylim(500, MAX_STEPS * 2.4)
 ax.set_xlim(20, 90)
@@ -203,7 +219,10 @@ sd.to_csv(FIG / "fig1_sourcedata.csv", index=False)
 # Figure 2 — repetition
 # ===========================================================================
 fig, axes = plt.subplots(1, 4, figsize=(5.5, 2.55))
-fig.subplots_adjust(left=0.088, right=0.995, top=0.97, bottom=0.15, wspace=0.52)
+# top margin lowered from 0.97 to 0.94: the bold panel letters sit 6% of the
+# axes height above the axes top, and at top=0.97 their glyph tops (y ~ 260 of
+# 255 px) were clipped at the figure edge
+fig.subplots_adjust(left=0.088, right=0.995, top=0.94, bottom=0.15, wspace=0.52)
 
 ax = axes[0]
 for rep in (1, 2, 4, 8):
@@ -336,8 +355,9 @@ ax.set_xticklabels([r"$2{\times}10^{3}$", r"$5{\times}10^{3}$",
 ax.minorticks_off()
 ax.set_xlabel("GrokTime (steps, grokked runs)")
 ax.set_ylabel(r"Final weight $\ell_2$ norm")
-ax.text(0.04, 0.95, f"Spearman $\\rho$ = {rho.statistic:.2f}",
-        transform=ax.transAxes, va="top", fontsize=6.5)
+# the Spearman rho is reported in the figure caption only: the in-panel
+# annotation (89 px wide at 6.5 pt) fits in no empty region of this narrow
+# panel -- every corner and the top band are occupied by scatter points
 letter(ax, "b")
 
 ax = axes[2]
@@ -350,7 +370,11 @@ ax.set_xscale("log")
 ax.set_xlim(100, MAX_STEPS)
 ax.set_xlabel("Optimization steps")
 ax.set_ylabel(r"Weight $\ell_2$ norm")
-ax.legend(ncol=2, loc="upper left", handlelength=1.2, columnspacing=0.8,
+# single column in the upper-right empty region: every curve starts high
+# (median norm ~50 at the first evaluated step) and descends through the
+# left half of the panel, so the previous upper-left legend sat on the
+# initial descent
+ax.legend(ncol=1, loc="upper right", handlelength=1.2,
           labelspacing=0.25)
 letter(ax, "c")
 

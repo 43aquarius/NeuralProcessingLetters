@@ -9,7 +9,7 @@ authors:
     given-names: Chang
     affiliation: Dalian University of Technology
     email: aquars43@foxmail.com
-repository-code: 'https://github.com/43aquarius/NeuralProcessingLetters'
+repository-code: 'https://github.com/43aquarius/grokking-coverage-vs-repetition'
 abstract: >-
   Training code, raw run logs, canonical analysis tables, statistical
   pipeline, and verification scripts for a 135-run study of coverage and
@@ -27,5 +27,5 @@ version: 1.0.0
 date-released: '2026-10-13'
 related-identifiers:
   - type: url
-    value: 'https://github.com/43aquaris/NeuralProcessingLetters/releases'
+    value: 'https://github.com/43aquarius/grokking-coverage-vs-repetition/releases'
     relation: is-supplement-to

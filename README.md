@@ -7,9 +7,13 @@ constant across repetition levels.
 
 Manuscript: *Coverage versus within-epoch repetition at matched dose in
 transformer grokking* (submitted to Neural Processing Letters). The
-submission package (PDF and LaTeX source) is archived in this repository's
-[Releases](https://github.com/43aquarius/NeuralProcessingLetters/releases);
-the published DOI will be added here once available.
+manuscript itself and all submission-related material (PDF and LaTeX source
+of both the journal version and the working version, cover letter, manifest,
+and the audit/QA trail) are archived **only in this repository's
+[Releases](https://github.com/43aquarius/grokking-coverage-vs-repetition/releases)**;
+the repository working tree holds the research artifact (code, data, and
+analysis outputs) that the manuscript's Data and Code availability statements
+reference. The published DOI will be added here once available.
 
 ## What is here
 
@@ -44,13 +48,10 @@ data/
 results/
   stats/                every table/statistic CSV produced by analyze.py, plus
                         the verification report and the environment log
-  figures/              manuscript figures (PDF + 300 dpi PNG)
+  figures/              manuscript figures (PDF + 300 dpi PNG + source data CSVs)
   tables/               descriptive table (LaTeX + CSV)
 docs/
-  submission/           cover letter, submission-package manifest, release notes
-  manuscript-revised/   preprint-style working version of the manuscript (LaTeX + PDF)
-  reports/              the audit/QA trail (verification reports, changelogs,
-                        action lists, internal referee report)
+  DATA_DICTIONARY.md    column names, units, and meaning of every data file
 ```
 
 ## Installation
@@ -153,12 +154,18 @@ the final report is `results/stats/verification_report.csv`.
   wnorm@1000); deterministic enumerations consume no randomness. See
   `results/stats/env_log.txt` for the machine-readable record.
 
+## Data dictionary
+
+Column names, units, and the meaning of every field in `data/raw/*.json`,
+`data/summary.csv`, `data/history.csv`, and `data/runs.csv` are documented in
+[`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md).
+
 ## Licence
 
 Code is licensed under the [MIT License](LICENSE). Data files (everything
 under `data/` and `results/`) and the manuscript figures are licensed under
 [Creative Commons Attribution 4.0 International (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
 If you reuse the data or figures, please cite the manuscript and this
-repository. (Alternatives were considered in `PRE_RELEASE_CHECKLIST.md`;
-swap them by editing `LICENSE`, `CITATION.cff`, `.zenodo.json`, and this
-section if a different choice is preferred.)
+repository. (Code MIT versus Apache-2.0 and data CC-BY-4.0 versus CC0 were
+the alternatives considered; to change the choice, edit `LICENSE`,
+`CITATION.cff`, `.zenodo.json`, and this section together.)

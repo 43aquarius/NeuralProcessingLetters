@@ -1,0 +1,45 @@
+\begin{table}[t]
+\centering
+\caption{\textbf{Descriptive statistics by condition.} GrokTime (steps,
+thousands) and final test accuracy are given as median [interquartile
+range] across $n=5$ seeds; censored runs are counted at the budget
+($20{,}000$ steps) in the GrokTime median. MemTime is the median step at
+which training accuracy first reaches $95\%$. Mode is vacuous at $R=1$
+(copies coincide); interleaved $R{=}1$ is identical to blocked $R{=}1$ and
+omitted.}
+\label{tab:descriptives}
+\small
+\begin{tabular}{rrlrrrr}
+\toprule
+Coverage (\%) & $R$ & Mode & GrokTime (k steps) & Cens. & MemTime & Final test acc. (\%) \\
+\midrule
+25 & 1 & blocked & 20.0 [20.0, 20.0]k & 5/5 & 100 & 13.4 [12.8, 15.6] \\
+25 & 4 & blocked & 20.0 [20.0, 20.0]k & 5/5 & 100 & 21.7 [21.2, 21.9] \\
+25 & 8 & blocked & 20.0 [20.0, 20.0]k & 5/5 & 200 & 21.2 [19.4, 21.9] \\
+25 & 8 & interleaved & 20.0 [20.0, 20.0]k & 5/5 & 100 & 17.4 [17.1, 19.1] \\
+35 & 1 & blocked & 20.0 [16.9, 20.0]k & 3/5 & 100 & 90.4 [38.1, 95.1] \\
+35 & 2 & blocked & 20.0 [20.0, 20.0]k & 4/5 & 100 & 41.3 [33.4, 44.2] \\
+35 & 2 & interleaved & 20.0 [20.0, 20.0]k & 5/5 & 100 & 59.6 [37.5, 62.5] \\
+35 & 4 & blocked & 20.0 [20.0, 20.0]k & 5/5 & 200 & 36.0 [33.1, 38.7] \\
+35 & 4 & interleaved & 20.0 [20.0, 20.0]k & 5/5 & 100 & 55.8 [32.8, 60.5] \\
+35 & 8 & blocked & 20.0 [20.0, 20.0]k & 5/5 & 200 & 44.5 [41.3, 52.3] \\
+35 & 8 & interleaved & 20.0 [20.0, 20.0]k & 5/5 & 100 & 75.9 [61.9, 83.7] \\
+45 & 1 & blocked & 8.4 [8.1, 8.8]k & 0/5 & 100 & 95.9 [95.5, 96.2] \\
+55 & 1 & blocked & 4.7 [3.2, 4.7]k & 0/5 & 100 & 96.6 [95.4, 97.9] \\
+55 & 2 & blocked & 4.2 [4.0, 7.2]k & 0/5 & 200 & 96.6 [95.8, 97.5] \\
+55 & 2 & interleaved & 3.5 [3.4, 3.8]k & 0/5 & 100 & 96.6 [96.2, 97.1] \\
+55 & 4 & blocked & 4.4 [4.0, 5.0]k & 0/5 & 200 & 96.2 [95.8, 96.2] \\
+55 & 4 & interleaved & 4.7 [4.0, 6.9]k & 0/5 & 200 & 96.2 [96.2, 96.2] \\
+55 & 8 & blocked & 3.8 [3.3, 3.9]k & 0/5 & 300 & 97.1 [95.8, 97.9] \\
+55 & 8 & interleaved & 3.9 [3.9, 4.5]k & 0/5 & 200 & 95.8 [95.4, 96.2] \\
+70 & 1 & blocked & 2.6 [2.4, 2.8]k & 0/5 & 200 & 96.9 [96.9, 97.5] \\
+85 & 1 & blocked & 1.8 [1.7, 2.2]k & 0/5 & 200 & 98.7 [97.5, 98.7] \\
+85 & 2 & blocked & 1.7 [1.6, 1.8]k & 0/5 & 200 & 96.2 [96.2, 98.7] \\
+85 & 2 & interleaved & 1.8 [1.8, 2.0]k & 0/5 & 200 & 98.7 [97.5, 98.7] \\
+85 & 4 & blocked & 1.7 [1.6, 1.8]k & 0/5 & 300 & 98.7 [97.5, 98.7] \\
+85 & 4 & interleaved & 1.8 [1.7, 1.9]k & 0/5 & 200 & 98.7 [96.2, 100.0] \\
+85 & 8 & blocked & 1.7 [1.6, 1.8]k & 0/5 & 500 & 97.5 [96.2, 97.5] \\
+85 & 8 & interleaved & 1.9 [1.7, 1.9]k & 0/5 & 200 & 96.2 [96.2, 97.5] \\
+\bottomrule
+\end{tabular}
+\end{table}

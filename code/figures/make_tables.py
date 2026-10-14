@@ -10,6 +10,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 MAIN = REPO / "data"
 OUT = REPO / "results" / "tables" / "table_descriptives.tex"
+OUT.parent.mkdir(parents=True, exist_ok=True)  # create results/tables/ on first use
 MAX_STEPS = 20_000
 
 df = pd.read_csv(MAIN / "summary.csv")
