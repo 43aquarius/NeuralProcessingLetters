@@ -41,13 +41,14 @@ code/
     make_figures.py     Figures 1-3 of the manuscript
     make_tables.py      descriptive-statistics table (manuscript Table 2 source)
 data/
-  raw/                  135 per-run JSON logs (the primary data)
+  raw/                  135 per-run JSON logs (the primary data only)
   summary.csv           one row per run (built by aggregate_runs.py)
   history.csv           one row per (run, evaluation step)
   runs.csv              canonical analysis table (built by make_runs_table.py)
 results/
   stats/                every table/statistic CSV produced by analyze.py, plus
-                        the verification report and the environment log
+                        the verification report, the environment log, and
+                        stats.json (per-cell summary written by aggregate_runs.py)
   figures/              manuscript figures (PDF + 300 dpi PNG + source data CSVs)
   tables/               descriptive table (LaTeX + CSV)
 docs/

@@ -87,3 +87,9 @@ encoding:
 given in the README's "Where each manuscript number, table, and figure comes
 from" table, and the full audit trail is `results/stats/verification_report.csv`
 (353 claimed statistics re-derived from these files).
+
+`results/stats/stats.json` is a compact per-condition summary of the
+pre-registered-style exploratory statistics (per-cell medians of the weight
+norm at step 1,000, family tests, mode contrasts, and the Spearman
+exploration) written by `code/train/aggregate_runs.py` when the raw logs are
+aggregated. It is a derived convenience summary, not primary data.
